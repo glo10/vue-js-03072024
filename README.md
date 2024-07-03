@@ -13,7 +13,7 @@
 ### Installations et lancement
 
 - [Quick Start](https://vuejs.org/guide/quick-start.html#creating-a-vue-application)
-- [Vite and Vue](https://stackblitz.com/edit/vitejs-vite-xxsomp?file=index.html&
+- [Vite and Vue](https://stackblitz.com/edit/vitejs-vite-xxsomp?file=index.html)
 - [Creating a Vue Application](https://vuejs.org/guide/essentials/application.html)
 - [Vue Devtools](https://devtools.vuejs.org/)
 - [Vue VSCODE Extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
