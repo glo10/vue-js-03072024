@@ -1,5 +1,7 @@
 # Vue 3
 
+- [Lien Teams](https://teams.microsoft.com/l/meetup-join/19:xG406kufBHlSaCwagHB7UYEhrdcAp4Dm6ClRrMaX71E1@thread.tacv2/1720000157755?context=%7B%22Tid%22:%22373016f8-79a9-4eed-80d2-100ce948d960%22,%22Oid%22:%224d8d739a-eef1-46f2-9592-cd034a63dbc8%22%7D)
+
 ---
 
 ## Validation des acquis demi-journée
