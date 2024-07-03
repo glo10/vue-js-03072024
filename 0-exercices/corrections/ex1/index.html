@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{ user.firstname }}</p>
+        <p>{{ user.lastname }}</p>
+        <p>{{ user.age }}</p>
+    </div>
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+    <script>
+        // variable Vue est globale depuis l'import du CDN
+        const { createApp } = Vue
+        createApp({
+            // data est une fonction qui retourne un objet contenant toutes les données
+            data() {
+                return {
+                    user: {
+                        firstname: 'Glodie',
+                        lastname: 'Tshimini',
+                        age: 32
+                    }
+                }
+            }
+        })
+        .mount('#app')
+    </script>
+</body>
+</html>
