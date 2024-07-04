@@ -1,11 +1,16 @@
 <script setup>
-import { ref, onMounted, onBeforeMount } from "vue";
+import { ref, onBeforeMount } from "vue";
 import TheHeader from "./components/convertor/TheHeader.vue";
 import TheInput from "./components/convertor/TheInput.vue";
 import TheSelect from "./components/convertor/TheSelect.vue";
 import TheFooter from "./components/convertor/TheFooter.vue";
 import TheButton from "./components/convertor/TheButton.vue";
 let baseApi = "https://api.exchangerate-api.com/v4/latest";
+/**
+ * En cas de blocage CORS en développeme
+ * https://developer.mozilla.org/fr/docs/Web/HTTP/CORS
+ * Il faut lancer le proxy avec npm run proxy
+ */
 if(import.meta.env.MODE === 'development') {
   baseApi = `http://127.0.0.1:7000/${baseApi}`
 }
@@ -43,27 +48,30 @@ const updateInitAmount = (payload) => {
 };
 
 const btnAction = (label) => {
-  if (label === "Convertir") {
+  if (label.toLowerCase() === "convertir") {
     getResults();
   } else {
     clearValues();
   }
 };
 const updateCurrency = (payload) => {
-  if (payload.type === "from") {
+  if (payload.type.toLowerCase() === "from") {
     from.value = payload.value;
-  } else if (payload.type === "to") {
+  } else if (payload.type.toLowerCase() === "to") {
     to.value = payload.value;
   }
 };
-
+// Hook avant montage du composant dans le DOM
 onBeforeMount(() => fetchCurrencies());
 </script>
 
 <template>
   <main>
     <TheHeader />
-    <TheInput @input:change="updateInitAmount" :start="start" />
+    <TheInput
+      @input:change="updateInitAmount"
+      :start="start"
+    />
     <TheSelect
       v-for="label in ['from', 'to']"
       :key="label"

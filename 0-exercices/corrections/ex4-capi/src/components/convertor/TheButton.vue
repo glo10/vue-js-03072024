@@ -11,6 +11,11 @@ const toParent = () => {
 </script>
 <template>
   <div class="text-center">
-    <button @click="toParent" class="btn btn-primary m-2">{{ label }}</button>
+    <button
+      @click="toParent"
+      class="btn btn-primary m-2"
+    >
+      {{ label }}
+    </button>
   </div>
 </template>

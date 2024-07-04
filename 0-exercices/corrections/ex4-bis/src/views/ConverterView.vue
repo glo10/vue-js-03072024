@@ -49,7 +49,7 @@ export default {
     },
     getRates() {
       let currency = localStorage.getItem(`currency_${this.rateFrom}`)
-      if (currency === null) {
+      if (currency === null || currency === undefined) {
         fetch(`https://open.er-api.com/v6/latest/${this.rateFrom}`)
           .then(currency => currency.json())
           .then((currency) => {
@@ -57,7 +57,7 @@ export default {
             this.conversion(currency.rates)
           })
       } else {
-        currency = JSON.parse(localStorage.getItem(`currency_${this.rateFrom}`))
+        currency = JSON.parse(currency)
         this.conversion(currency.rates)
       }
     },
@@ -70,6 +70,7 @@ export default {
       }
     },
     clearValues() {
+      // @see https://vuejs.org/guide/essentials/template-refs.html
       this.$refs.inputAmount.amount = 0
       this.$refs.result.final = 0
       this.isShowResult = false
@@ -83,6 +84,7 @@ export default {
     <main class="container">
       <div class="main">
         <TheResult v-show="isShowResult" ref="result" />
+        <!-- @see https://vuejs.org/guide/essentials/template-refs.html-->
         <TheAmountForm ref="inputAmount"/>
         <SelectCurrency
           v-for="label in labels"
@@ -94,7 +96,7 @@ export default {
           v-for="btn in btns"
           :key="btn.id"
           :btn="btn"
-          v-on="btn.id === 1 ? {'get-result': getRates}:{'clear-values':clearValues}"
+          v-on="btn.id === 1 ? {'get-result': getRates}:{'clear-values': clearValues}"
         />
       </div>
       <footer>

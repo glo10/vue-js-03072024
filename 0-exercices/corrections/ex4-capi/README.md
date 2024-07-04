@@ -33,3 +33,9 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Proxy for HTTP CROSS-ORIGIN Resource Sharing(CORS)
+
+```sh
+npm run proxy
+```

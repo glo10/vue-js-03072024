@@ -11,6 +11,12 @@ const updateAmount = (event) => {
 <template>
   <div class="form-group">
     <label for="oamount"> Amount to Convert : </label>
-    <input type="number" :value="start" class="form-control searchBox" @change="updateAmount" id="oamount" />
+    <input
+      type="number"
+      id="oamount"
+      class="form-control searchBox"
+      :value="start"
+      @change="updateAmount"
+    />
   </div>
 </template>

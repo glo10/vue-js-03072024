@@ -9,7 +9,7 @@ export default {
 </script>
 <template>
   <div class="form-group">
-    <label for="oamount"> Amount to Convert : </label>
+    <label for="oamount">Amount to Convert : </label>
     <input
       type="number"
       class="form-control searchBox"

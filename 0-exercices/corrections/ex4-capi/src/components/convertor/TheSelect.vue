@@ -5,12 +5,15 @@
         },
         currencies: {
           type: Object,
-          default: ['EUR', 'USD', 'CHF', 'GBP']
+          default() {
+            return ['EUR', 'USD', 'CHF', 'GBP']
+          }
         }
     })
     const emit = defineEmits(['select:currency'])
     const toParent = (event) => {
-      emit('select:currency', { type: label, value: event.target.value })
+      const payload = { type: label, value: event.target.value }
+      emit('select:currency', payload)
     }
 </script>
 <template>
@@ -19,7 +22,8 @@
     <option
       v-for="item in currencies"
       :key="item"
-      :value="item"
-    >{{item}}</option>
+      :value="item">
+      {{item}}
+    </option>
   </select>
 </template>
