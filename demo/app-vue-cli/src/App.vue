@@ -1,9 +1,9 @@
 <template>
+  <HelloWorld msg="Welcome to Your Vue.js App" name="Glodie Tshimini"/>
   <img alt="Vue logo" src="./assets/logo.png">
   <!-- Le parent écoute l'événement personnalisé input:change transmis par le composant enfant InputComponent-->
   <InputComponent @input:change="update" />
   <!-- msg et name sont des props définis au niveau du composant enfant HelloWorld -->
-  <HelloWorld msg="Welcome to Your Vue.js App" name="Glodie Tshimini"/>
 </template>
 
 <script>
