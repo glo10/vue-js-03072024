@@ -10,17 +10,17 @@
 
 ---
 
-## Aide
+## Aide pour une mise en place avec l'Options API
 
-1. Créez un nouveau composant au niveau du dossier */src/components*
-2. Importez ce composant dans */src/App.vue*.
+1. Créez un nouveau ou plusieurs composants au niveau du dossier */src/components*
+2. Importez-les dans */src/App.vue*.
 3. Supprimez tout ce qui se réfère à *HelloWorld.vue* dans */src/App.vue*.
 4. Dans */public/index.html*, ajoutez tous les liens externes aux fonts, librairies, etc dans la balise `<head></head>`.
-5. Ajoutez le contenu du *body* HTML et le CSS aux endroits dédiés dans votre composant.
+5. Ajoutez le contenu du *body* HTML et le CSS aux endroits dédiés dans votre composant. Le HTML entre les balises `<template></template>` et le CSS entre les balises `<style></style>`
 6. Dans le CSS, supprimez toutes les propriétés `display:none`.
-7. Intégrez et refactorisez progressivemment le JavaScript d'origine dans la partie dédiée au JS de votre composant.
-- Remplacez l'appel des méthodes du DOM (querySelector, getElementById, etc) par les propriétés Vue
-- Ajoutez les fonctions dans la partie methods
+7. Intégrez et refactorisez progressivemment le JavaScript d'origine dans la partie dédiée au JS de votre composant entre les balises `<script></script>`.
+- Remplacez l'appel des méthodes du DOM (*querySelector, getElementById, etc.*) par les propriétés Vue
+- Ajoutez les fonctions dans la partie *methods*
 - Modifiez les fonctions si nécessaires par rapport à la logique du framework Vue
 - Ajoutez, associez les événements et les méthodes
 
