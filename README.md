@@ -20,6 +20,36 @@
 - [Vue Devtools](https://devtools.vuejs.org/)
 - [Vue VSCODE Extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
+### Vue core
+
+- [Props](https://vuejs.org/guide/components/props.html)
+- [ref](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#declaring-reactive-state-1)
+- [reactive](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#reactive)
+- [Computed Properties](https://vuejs.org/guide/essentials/computed.html)
+- [Composition API FAQ](https://vuejs.org/guide/extras/composition-api-faq.html)
+- [Event Handling](https://vuejs.org/guide/essentials/event-handling.html)
+- [Form input bindings](https://vuejs.org/guide/essentials/forms.html)
+
+### Cycle de vie
+
+- [Lifecycle Hooks](https://vuejs.org/guide/essentials/lifecycle.html)
+- [LyfeCycle](https://vuejs.org/guide/essentials/lifecycle)
+- [LyfeCycle Composition API](https://vuejs.org/api/composition-api-lifecycle.html#composition-api-lifecycle-hooks)
+
+### Composants
+
+- [Components Basics](https://vuejs.org/guide/essentials/component-basics.html)
+- [SFC](https://vuejs.org/guide/scaling-up/sfc.html)
+- [Template](https://vuejs.org/guide/essentials/template-syntax.html)
+- [Template Refs](https://vuejs.org/guide/essentials/template-refs.html)
+
+### Routes et router
+
+- [Vue router](https://router.vuejs.org/guide/)
+- [Nested routes](https://router.vuejs.org/guide/essentials/nested-routes.html)
+
+---
+
 ### Bonnes pratiques
 
 - [Guide](https://v3.ru.vuejs.org/style-guide/#rule-categories)
@@ -44,7 +74,6 @@
 ---
 
 ## Compléments hors programme 
-
 
 - [Provide / Inject](https://vuejs.org/guide/components/provide-inject.html)
 - [Async Component](https://vuejs.org/guide/components/async.html#basic-usage)
