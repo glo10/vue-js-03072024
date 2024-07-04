@@ -1,5 +1,18 @@
 <script setup>
-import { firstname, lastname, age, ageToString, add, techno, technos } from '@/functions/data';
+// import { firstname, lastname, age, ageToString, add, techno, technos } from '@/functions/data';
+import { ref, computed } from 'vue'
+const firstname = ref('')
+const lastname = ref('')
+const age = ref(0)
+const techno = ref('')
+const technos = ref([])
+const ageToString = computed(() => {
+  return age.value >= 18 ? 'Adulte' : 'ado'
+})
+function add() {
+  technos.value.push({ id: technos.value.length + 1, value: techno.value })
+  techno.value = ''
+}
 </script>
 
 <template>
@@ -11,20 +24,11 @@ import { firstname, lastname, age, ageToString, add, techno, technos } from '@/f
       <h2>Saisie</h2>
       <div>
         <form>
-          <input type="text" v-model.lazy.trim="firstname" placeholder="Prénom">
-          <input type="text" v-model.lazy.trim="lastname" placeholder="Nom">
+          <input type="text" v-model.trim="firstname" placeholder="Prénom">
+          <input type="text" v-model.trim="lastname" placeholder="Nom">
           <input type="number" v-model="age" placeholder="Age">
-          <input
-            type="text"
-            v-model.lazy.trim="techno"
-            placeholder="Techno"
-            @keyup.enter="add"
-          >
-          <input
-            @click.prevent="add"
-            type="submit"
-            value="Ajouter"
-          >
+          <input type="text" v-model.trim="techno" placeholder="Techno" @keyup.enter="add">
+          <input @click.prevent="add" type="submit" value="Ajouter">
         </form>
       </div>
     </section>
@@ -64,6 +68,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .greetings h1,
   .greetings h3 {
     text-align: left;
