@@ -1,0 +1,17 @@
+{
+  "name": "vue-03072024",
+  "version": "1.0.0",
+  "description": "- [Lien Teams](https://teams.microsoft.com/l/meetup-join/19:xG406kufBHlSaCwagHB7UYEhrdcAp4Dm6ClRrMaX71E1@thread.tacv2/1720000157755?context=%7B%22Tid%22:%22373016f8-79a9-4eed-80d2-100ce948d960%22,%22Oid%22:%224d8d739a-eef1-46f2-9592-cd034a63dbc8%22%7D)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.0",
+    "supertest": "^7.0.0",
+    "vitest": "^1.6.0"
+  }
+}
