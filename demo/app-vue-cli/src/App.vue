@@ -1,43 +1,29 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App" name="Glodie Tshimini"/>
   <img alt="Vue logo" src="./assets/logo.png">
-  <!-- Le parent écoute l'événement personnalisé input:change transmis par le composant enfant InputComponent-->
-  <InputComponent @input:change="update" />
-  <!-- msg et name sont des props définis au niveau du composant enfant HelloWorld -->
+  <!-- Mise en place menu de navigation -->
+  <!-- <router-link to="/">Accueil</router-link>&nbsp;
+  <router-link :to="{name : 'Contact'}">Contact</router-link>&nbsp;
+  <router-link :to="{ name : 'News'}">News</router-link>&nbsp; -->
+  <!-- Les pages seront chargées au niveau de la balise RouterView -->
+  <!-- Navigation dynamique à partir de toutes les routes -->
+  <router-link
+    v-for="{ name } in routes"
+    :to="{ name }"
+    :key="name"
+  >
+    {{ name }}&nbsp;
+  </router-link>
+  <RouterView />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import InputComponent from '@/components/InputComponent.vue'
-
+import { routes } from './router/routes';
 export default {
-  // Nom du composant
   name: 'App',
-  // fonctions
-  methods: {
-    update(payload) {
-      console.log('payload envoyé par child', payload)
-    },
-    log() {
-      console.log('monté')
-    },
-    info() {
-      console.info('info')
+  data() {
+    return {
+      routes
     }
-  },
-  // Tous les composants enfants utilisés par le composant courant
-  components: {
-    HelloWorld,
-    InputComponent,
-  },
-  // hook avant création
-  beforeCreate() {
-    console.log('création')
-  },
-  // hook après montage de l'instance dans le DOM
-  mounted() {
-    this.info(),
-    this.log()
   }
 }
 </script>
