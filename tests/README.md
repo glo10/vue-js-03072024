@@ -1,5 +1,12 @@
 # Testing
 
+## Libraires pour le testing
+
+- Jest (tests unitaires)
+- Vitest( tests unitaires concurrent direct de Jest, developpé par les devs de Vue)
+- Cypress (tets d'intégration et end to end)
+- supertest (tests d'intégration, pour tester des routes)
+
 ---
 
 ## Tests unitaires sur les fonctions math.mjs de l'exercice 3

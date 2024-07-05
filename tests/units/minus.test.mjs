@@ -1,5 +1,5 @@
 import {describe, it, test, expect } from 'vitest'
-import { minus } from '../../0-exercices/corrections/ex3/math.mjs'
+import { minus } from './math.mjs'
 
 describe('Déscription de l\'ensemble des tests à effectuer', () => {
   it.each([

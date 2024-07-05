@@ -48,6 +48,10 @@
 - [Vue router](https://router.vuejs.org/guide/)
 - [Nested routes](https://router.vuejs.org/guide/essentials/nested-routes.html)
 
+## Style CSS
+
+- [Classes et styles CSS](https://vuejs.org/guide/essentials/class-and-style)
+
 ---
 
 ### Bonnes pratiques

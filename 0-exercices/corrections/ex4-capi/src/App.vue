@@ -27,8 +27,10 @@ const getResults = () => {
 };
 
 const fetchCurrencies = () => {
+  // Tout ce qui est dans public, pour l'appeler c'est depuis le chemin /
   fetch("/fixtures/currencies.json")
-    .then(res => res.json())
+    .then(res => res.json()) // tranformer le résultat textuel en objet Javascript
+    // Pour du contenu textuel comme par une page html qu'on charge, il faut utiliser res.text()
     .then((data) => currencies.value = data.currencies)
 };
 

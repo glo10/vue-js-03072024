@@ -1,12 +1,16 @@
 /* eslint-disable no-undef */
 describe('Form validation testing', () => {
+
+  // Arrange
   beforeEach(() => {
     cy.visit('/')
   })
 
   describe('Sign Up', () => {
     it('Should show error message for lastname', () => {
+      // Act
       cy.get('[name=lastname]').type('A')
+      // Assert
       cy.get('.alert.alert-info').should(elt => {
         expect(elt.text()).to.include('Au moins 2 caractères')
       })

@@ -1,5 +1,5 @@
 import request from 'supertest'
-import app from '../../0-exercices/corrections/ex5/src/app.mjs'
+import app from './app.mjs'
 import { describe, it, expect } from 'vitest'
 
 describe('GET /', () => {
