@@ -1,0 +1,13 @@
+<template>
+  <div>
+    <header>
+      <slot name="header"></slot>
+    </header>
+    <main class="container-fluid">
+      <slot name="main"></slot>
+    </main>
+    <footer>
+      <slot name="footer"></slot>
+    </footer>
+  </div>
+</template>
