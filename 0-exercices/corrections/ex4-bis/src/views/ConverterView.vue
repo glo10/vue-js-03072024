@@ -96,8 +96,11 @@ export default {
           v-for="btn in btns"
           :key="btn.id"
           :btn="btn"
-          v-on="btn.id === 1 ? {'get-result': getRates}:{'clear-values': clearValues}"
+          v-on="btn.id === 1 ? {'get-result': getRates}:{'clear-values': clearValues}" 
         />
+        <!-- Pour l'événement en fonction de l'action, il vaut mieux le gérer avec un seul événement et une seule fonction
+        cf. correction avec la version CAPI
+         -->
       </div>
       <footer>
         <TheCredit />
