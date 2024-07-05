@@ -29,6 +29,12 @@ export default {
 </script>
 
 <style>
+
+.link-active {
+  font-weight: 900;
+  color: red;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

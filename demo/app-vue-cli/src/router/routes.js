@@ -10,12 +10,18 @@ export const routes = [
     path: "/contact",
     name: "Contact",
     // import uniquement lorsqu'il y aura une requête vers cette page
-    component: () => import('@/views/PageContactView.vue')
+    component: () => import('@/views/PageContactView.vue'),
+    meta: {
+        title: 'Page de contact'
+    }
   },
   {
     path: "/newsletters",
     name: "News",
-    component: () => import('@/views/PageNewsLettersView.vue')
+    component: () => import('@/views/PageNewsLettersView.vue'),
+    meta: {
+        title: 'Page de News'
+    }
   },
   {
     path: "/actus",
