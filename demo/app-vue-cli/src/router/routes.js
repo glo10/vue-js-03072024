@@ -24,8 +24,8 @@ export const routes = [
     }
   },
   {
-    path: "/actus",
-    name: "Actus",
-    component: () => import('@/views/PageNewsLettersView.vue')
+    path: "/users/:login?/:id?",
+    name: "Users",
+    component: () => import('@/views/PageUsersView.vue')
   },
 ];
