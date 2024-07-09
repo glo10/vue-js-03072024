@@ -16,3 +16,10 @@ describe('GET /', () => {
     expect(response.text).toContain("Bienvenue")
   })
 })
+
+describe('GET /contact', () => {
+  it('Should have 404 status', async () => {
+    const response = await request(app).get('/contact')
+    expect(response.statusCode).toBe(404)
+  })
+})

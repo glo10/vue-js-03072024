@@ -3,11 +3,10 @@ import { sum } from "./math.mjs"
 describe("demo testing", () => {
   it("Should be 10 when nb1=5 and nb2=5", () => {
     // Act
-    const result = sum(nb1, nb2)
+    const result = sum(5, 5.0)
     // Assert
-    expect(result).toMatch(10)
+    expect(result).toBe(10)
   })
-
 
   it.each([
     [5,3,2],
@@ -17,6 +16,6 @@ describe("demo testing", () => {
     // Act
     const result = sum(nb1, nb2)
     // Assert
-    expect(result).toMatch(expected)
+    expect(result).toEqual(expected)
   })
 });

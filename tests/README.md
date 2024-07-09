@@ -14,10 +14,10 @@
 - `npm run test:unit`
 
 
-## Tests d'intégration routes du serveur de l'exercice 5
+## Tests d'intégration routes du serveur
 
 - Lancez le serveur web de l'exercice 5
-- `npm run test:int:ex5`
+- `npm run test:int:route`
 
 
 ## Tests E2E sur une page d'inscription présent dans le dossier front
